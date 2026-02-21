@@ -1,61 +1,76 @@
-# Telecom X — Análise de Evasão de Clientes (Churn)
+# Telecom X — Análise de Evasão de Clientes
 
-## 1. Contexto
+## Contexto
 
-A Telecom X enfrenta uma alta taxa de evasão de clientes (churn), impactando diretamente sua receita e estabilidade financeira. Este projeto realiza uma análise exploratória de dados com o objetivo de identificar os principais fatores associados ao cancelamento.
+A Telecom X vem enfrentando um volume elevado de cancelamentos, o que impacta diretamente a receita recorrente e a previsibilidade financeira do negócio. Diante desse cenário, tornou-se necessário compreender melhor os fatores que influenciam a saída dos clientes.
 
----
-
-## 2. Objetivo
-
-- Identificar padrões relacionados ao churn  
-- Apoiar decisões estratégicas de retenção  
-- Fornecer base para futuros modelos preditivos  
+Este projeto tem como foco investigar esses padrões por meio de análise exploratória de dados.
 
 ---
 
-## 3. Metodologia
+## Objetivo
+
+- Examinar o comportamento dos clientes que cancelaram o serviço  
+- Identificar características associadas a maior risco de evasão  
+- Gerar insumos para estratégias de retenção e análises preditivas futuras  
+
+---
+
+## Metodologia
 
 ### Extração de Dados
-- Dados obtidos via API em formato JSON  
-- Normalização e estruturação utilizando Pandas  
+
+Os dados foram disponibilizados via API em formato JSON e estruturados em DataFrame utilizando a biblioteca Pandas.
 
 ### Limpeza e Tratamento
-- Tratamento de valores nulos e inconsistentes  
-- Conversão de variáveis numéricas  
-- Padronização de variáveis categóricas  
-- Criação da variável alvo `Churn_binaria`  
 
-### Análise Exploratória de Dados
-- Taxa geral de churn  
-- Churn por tipo de contrato  
-- Relação entre tempo de contrato e evasão  
-- Impacto do valor mensal  
+Durante essa etapa, foram realizadas as seguintes ações:
+
+- Correção e padronização de variáveis categóricas  
+- Conversão de colunas numéricas  
+- Tratamento de valores ausentes e inconsistentes  
+- Criação da variável `Churn_binaria` para facilitar as análises estatísticas  
+
+Esses procedimentos garantiram maior confiabilidade nos resultados obtidos.
+
+---
+
+## Análise Exploratória
+
+Foram avaliadas variáveis contratuais, demográficas e financeiras, com destaque para:
+
+- Tipo de contrato  
+- Tempo de permanência  
+- Valor mensal  
 - Método de pagamento  
-- Influência de serviços adicionais  
+- Serviços adicionais contratados  
+
+A comparação entre clientes ativos e cancelados permitiu identificar diferenças relevantes entre os grupos.
 
 ---
 
-## 4. Principais Resultados
+## Principais Resultados
 
-- Contratos mensais apresentam maior taxa de churn  
-- Cancelamentos concentram-se nos primeiros meses de contrato  
-- Clientes que cancelam possuem maior valor mensal médio  
-- Pagamentos via cheque eletrônico apresentam maior risco  
-- Ausência de serviços adicionais aumenta a probabilidade de evasão  
-
----
-
-## 5. Recomendações
-
-- Incentivar contratos de maior duração  
-- Implementar estratégias de retenção nos primeiros 30/60/90 dias  
-- Estimular pagamento automático  
-- Desenvolver pacotes com serviços agregados  
+- Clientes com contrato mensal apresentam maior probabilidade de cancelamento.  
+- A evasão ocorre com maior frequência nos primeiros meses de relacionamento.  
+- O valor mensal médio é superior entre os clientes que cancelaram.  
+- Métodos de pagamento não automáticos, como cheque eletrônico, estão associados a maior taxa de churn.  
+- A ausência de serviços adicionais está relacionada a maior risco de evasão.  
 
 ---
 
-## 6. Tecnologias Utilizadas
+## Recomendações
+
+Com base nos achados, recomenda-se:
+
+- Fortalecer ações de retenção nos primeiros meses de contrato.  
+- Estimular a migração para contratos de maior duração.  
+- Incentivar a adoção de pagamento automático.  
+- Desenvolver ofertas que agreguem serviços complementares ao plano principal.  
+
+---
+
+## Tecnologias Utilizadas
 
 - Python  
 - Pandas  
@@ -63,4 +78,4 @@ A Telecom X enfrenta uma alta taxa de evasão de clientes (churn), impactando di
 - Seaborn  
 - Google Colab  
 
----
+
